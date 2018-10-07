@@ -4,9 +4,9 @@ Training an agent to play game using reinforcement learning
 ## Environment
 Environment: Navigation (Modified Unity Environment).Here we will train an agent to collect yellow bananas while avoiding blue bananas. 
 
-Number of state space: The state space has 37 dimensions and contains the agent's velocity, along with ray-based perception of objects around the agent's forward direction. Given this information, the agent has to learn how to best select actions. Four discrete actions are available, corresponding to:
+Number of state space: The state space has 37 dimensions and contains the agent's velocity, along with ray-based perception of objects around the agent's forward direction. Given this information, the agent has to learn how to best select actions. 
 
-Number of action space: 4 (right,left,forward,backward)
+Number of action space: Four discrete actions are available (right,left,forward,backward)
 
 ### When environment is considered to be solved
 The task is episodic, and in order to solve the environment, your agent must get an average score of +13 over 100 consecutive episodes.
