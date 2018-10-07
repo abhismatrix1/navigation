@@ -38,11 +38,11 @@ cd navigation/python
 pip install .
 ```
 
-4. Create an [IPython kernel](http://ipython.readthedocs.io/en/stable/install/kernel_install.html) for the `drlnd` environment.  
+4. Create an [IPython kernel](http://ipython.readthedocs.io/en/stable/install/kernel_install.html) for the `game` environment.  
 ```bash
-python -m ipykernel install --user --name drlnd --display-name "drlnd"
+python -m ipykernel install --user --name game --display-name "game"
 ```
 
-5. Before running code in a notebook, change the kernel to match the `drlnd` environment by using the drop-down `Kernel` menu. 
+5. Before running code in a notebook, change the kernel to match the `game` environment by using the drop-down `Kernel` menu. 
 
 ![Kernel][image2]
