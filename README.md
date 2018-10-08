@@ -56,7 +56,6 @@ python -m ipykernel install --user --name game --display-name "game"
 
 7. Before running code in a notebook, change the kernel to match the `game` environment by using the drop-down `Kernel` menu. 
 
-![Kernel][image2]
 
 
 ### Instructions
