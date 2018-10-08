@@ -1,7 +1,7 @@
 # Navigation - Deep reinforcement learning agent
 Training an agent to play game using reinforcement learning
 
-## Environment
+## Environment (provided by udacity under reinforcement learning nano degree)
 Environment: Navigation (Modified Unity Environment).Here we will train an agent to collect yellow bananas while avoiding blue bananas. 
 
 Number of state space: The state space has 37 dimensions and contains the agent's velocity, along with ray-based perception of objects around the agent's forward direction. Given this information, the agent has to learn how to best select actions. 
