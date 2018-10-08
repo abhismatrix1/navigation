@@ -13,7 +13,7 @@ import torch.optim as optim
 BUFFER_SIZE = int(1e5)  # replay buffer size
 BATCH_SIZE = 64         # minibatch size
 GAMMA = 0.99            # discount factor
-TAU = 1e-1              # for soft update of target parameters
+TAU = 1e-3              # for soft update of target parameters
 LR = 5e-4               # learning rate 
 UPDATE_EVERY = 4        # how often to update the network
 
@@ -57,6 +57,7 @@ class Agent():
             # If enough samples are available in memory, get random subset and learn
             if len(self.memory) > BATCH_SIZE:
                 experiences = self.memory.sample()
+
                 self.learn(experiences, GAMMA)
 
     def act(self, state, eps=0.):
@@ -88,24 +89,17 @@ class Agent():
             gamma (float): discount factor
         """
         states, actions, rewards, next_states, dones = experiences
-
-        ## TODO: compute and minimize the loss
-        "*** YOUR CODE HERE ***"
-        
-        #print(actions.cpu().data.numpy())
-        
-            
-        
-        #print()
+        #rewards[rewards==0]=-.2
+        #print("reward",rewards)
         Q_target_next = self.qnetwork_target(next_states).detach().max(1)[0].unsqueeze(1)
         
         Q_targets= rewards +(gamma * Q_target_next * (1-dones))
-        #print("actions",actions[i].cpu().data.numpy()[0])
+
         Q_expected = self.qnetwork_local(states).gather(1, actions)
         
-        #print(y_i_hat)
+
         loss=F.mse_loss(Q_expected, Q_targets)
-        #
+
         self.optimizer.zero_grad()
         loss.backward()
         self.optimizer.step()
