@@ -9,7 +9,7 @@
   - BUFFER_SIZE = int(1e5)  # replay buffer size
   - BATCH_SIZE = 64         # minibatch size
   - GAMMA = 0.99            # discount factor
-  - TAU = 1e-1              # for soft update of target parameters
+  - TAU = 1e-3              # for soft update of target parameters
   - LR = 5e-4               # learning rate
   - UPDATE_EVERY = 4        # how often to update the network
 
@@ -19,11 +19,11 @@
 Four layer MLP
 
 ```bash
-self.fc1=nn.Linear(state_size,160) -> nn.Linear(160,80) -> nn.Linear(80,20) -> nn.Linear(20,action_size)
+self.fc1=nn.Linear(state_size,160) -> nn.Linear(160,80) -> nn.Linear(80,80) -> nn.Linear(80,action_size)
 ```
 
 ### Plot of scores
-![Agent_reward][reward]
+![training_graph.png](training_graph.png)
 
 ### Future Work (improvements)
 Applying these techniques to improve
